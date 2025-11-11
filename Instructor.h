@@ -7,7 +7,17 @@ using namespace std;
 
 
 
-
+class Instructor : public Person{
+    std::string department;
+    int experience;
+    void display();
+    Instructor(){};
+    Instructor(string dep, int exp){
+        department = dep;
+        experience = exp;
+    };
+    ~Instructor(){}
+};
 
 
 
