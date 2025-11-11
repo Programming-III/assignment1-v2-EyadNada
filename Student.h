@@ -7,7 +7,21 @@
 //#write student class here
 
 
+class Student : public Person{
+    
+    int yearLevel;
+    std::string major;
+    void display();
+    Student(){
 
+    }
+    Student(int yL, string m){
+        yearLevel = yL;
+        major = m;
+    }
+    ~Student(){}
+
+};
 
 
 
