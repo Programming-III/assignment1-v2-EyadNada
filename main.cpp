@@ -34,8 +34,11 @@ class Course{
 };
 int main(){
     Course c1;
+    c1.displayInfo();
     Instructor i1;
+    i1.displayInfo();
     Student s1;
+    s1.displayInfo();
     return 0;
 }
 // ==================== Person Class Implementation =========================
