@@ -7,7 +7,37 @@
 
 
 using namespace std;
-
+class Person{
+    void display(){
+        cout << "name is " << name << ", id is "<< id << endl;
+    }
+};
+class Student{
+    void display(){
+        cout << "Year level is: " << yearLevel << ", major is " << major << endl;
+    }
+};
+class Instructor{
+    void display(){
+        cout << "department :" << department<< " experience: " <<experienceYears << endl;
+    }
+};
+class Course{
+    addStudent(const Student& s){
+        
+    }
+    void displayCourseInfo(){
+        cout << "CourseCode: " << courseCode << endl;
+        cout << "Course Name: " << courseName << endl;
+        cout << "Current students" << currentStudents << endl;
+    }
+};
+int main(){
+    Course c1;
+    Instructor i1;
+    Student s1;
+    return 0;
+}
 // ==================== Person Class Implementation =========================
 
 
@@ -41,8 +71,4 @@ using namespace std;
 
 
 // ==================== Main Function ====================
-int main() {
-   
-    
-    return 0;
-}
+
