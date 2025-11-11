@@ -12,7 +12,22 @@ using namespace std;
 
 
 
-
+class Course : public Student{
+    private:
+        string courseCode;
+        string courseName;
+        int maxStudents;
+        Student* students;
+    Course(){};
+    Course(string cC, string cN, int mS){
+         courseCode = cC;
+         courseName = cN;
+         maxStudents = mS;
+    };
+    ~Course(){}
+    addStudent(const Student& s);
+    displayCourseInfo();
+};
 
 
 
