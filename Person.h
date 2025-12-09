@@ -18,7 +18,8 @@ class Person{
     ~Person(){}
     
 
-    display();
+    virtual void display();
+    virtual void roleInfo();
 };
 
 
