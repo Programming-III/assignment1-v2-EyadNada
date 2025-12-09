@@ -10,7 +10,7 @@
 class Student : public Person{
     
     int yearLevel;
-    std::string major;
+    string major;
     void display();
     Student(){
 
