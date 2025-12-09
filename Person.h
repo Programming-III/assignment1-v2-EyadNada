@@ -7,17 +7,14 @@ using namespace std;
 //#write Person class here
 
 class Person{
-    private:
-        std::string name;
+    protected:
+        string name;
         int id;
-    Person(){};
-    Person(string n, int id){
-        name = n;
-        this->id = id;
-    };
-    ~Person(){}
-    
 
+    public:
+    Person();
+    Person(string n, int id);
+    ~Person();
     virtual void display();
     virtual void roleInfo();
 };
