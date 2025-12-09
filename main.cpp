@@ -13,6 +13,19 @@ class Person{
     }
 };
 class Student{
+    Student(){}
+    Student(int yL, string m){
+        yearLevel = yL;
+        major = m;
+    }
+    ~Student(){
+        delete *Student;
+    }
+    void roleInfo() override{
+                cout << "Year level is: " << yearLevel << ", major is " << major << endl;
+
+        
+    }
     void display(){
         cout << "Year level is: " << yearLevel << ", major is " << major << endl;
     }
@@ -25,7 +38,7 @@ Instructor(){
         experience = exp;
     }
     ~Instructor(){
-        delete Instructor*;    
+        delete *Instructor;    
     }
     void roleInfo() override{
         cout << "department :" << department<< " experience: " <<experienceYears << endl;
@@ -68,7 +81,16 @@ int main(){
 
 
 
+  protected:
+    int yearLevel;
+    string major;
+    void display();
 
+    public:
+    Student();
+    Student(int yL, string m);
+    ~Student(){};
+    void roleInfo() override;
 
 
 
