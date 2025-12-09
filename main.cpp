@@ -18,6 +18,19 @@ class Student{
     }
 };
 class Instructor{
+Instructor(){
+}
+    Instructor(string dep, int exp){
+        department = dep;
+        experience = exp;
+    }
+    ~Instructor(){
+        delete Instructor*;    
+    }
+    void roleInfo() override{
+        cout << "department :" << department<< " experience: " <<experienceYears << endl;
+
+    }
     void display(){
         cout << "department :" << department<< " experience: " <<experienceYears << endl;
     }
