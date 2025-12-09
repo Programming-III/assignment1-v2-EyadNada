@@ -16,10 +16,7 @@ protected:
 public:
     void display();
     Instructor();
-    Instructor(string dep, int exp){
-        department = dep;
-        experience = exp;
-    };
+    Instructor(string dep, int exp);
     ~Instructor();
     void roleInfo() override;
 };
