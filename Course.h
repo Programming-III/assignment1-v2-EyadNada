@@ -13,20 +13,18 @@ using namespace std;
 
 
 class Course : public Student{
-    private:
+    protected:
         string courseCode;
         string courseName;
         int maxStudents;
         Student* students;
-    Course(){};
-    Course(string cC, string cN, int mS){
-         courseCode = cC;
-         courseName = cN;
-         maxStudents = mS;
-    };
-    ~Course(){}
-    addStudent(const Student& s);
-    displayCourseInfo();
+
+public:
+    Course();
+    Course(string cC, string cN, int mS);
+    ~Course();
+    void addStudent(const Student& s);
+    void displayCourseInfo();
 };
 
 
