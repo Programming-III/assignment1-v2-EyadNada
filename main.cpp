@@ -49,18 +49,25 @@ Instructor(){
     }
 };
 class Course{
-     Course: Course(string cC, string cN, int mS){
+     Course(string cC, string cN, int mS){
          courseCode = cC;
          courseName = cN;
          maxStudents = mS;
     }
     addStudent(const Student& s){
-        
+        students[s];
     }
     void displayCourseInfo(){
         cout << "CourseCode: " << courseCode << endl;
         cout << "Course Name: " << courseName << endl;
         cout << "Current students" << currentStudents << endl;
+    }
+ 
+    Course(){
+        
+    }
+    ~Course(){
+        delete students[];
     }
 };
 int main(){
@@ -77,21 +84,18 @@ int main(){
     return 0;
 }
 // ==================== Person Class Implementation =========================
+        string courseCode;
+        string courseName;
+        int maxStudents;
+        Student* students;
 
-
-
-
-  protected:
-    int yearLevel;
-    string major;
-    void display();
-
-    public:
-    Student();
-    Student(int yL, string m);
-    ~Student(){};
-    void roleInfo() override;
-
+public:
+    Course();
+    Course(string cC, string cN, int mS);
+    ~Course();
+    void addStudent(const Student& s);
+    void displayCourseInfo();
+};
 
 
 // ==================== Student Class Implementation ====================
