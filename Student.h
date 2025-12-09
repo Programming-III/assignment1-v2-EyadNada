@@ -19,7 +19,8 @@ class Student : public Person{
         yearLevel = yL;
         major = m;
     }
-    ~Student(){}
+    ~Student(){};
+    void roleIndo() override;
 
 };
 
