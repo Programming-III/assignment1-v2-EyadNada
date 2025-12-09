@@ -23,6 +23,11 @@ class Instructor{
     }
 };
 class Course{
+     Course: Course(string cC, string cN, int mS){
+         courseCode = cC;
+         courseName = cN;
+         maxStudents = mS;
+    }
     addStudent(const Student& s){
         
     }
@@ -35,10 +40,14 @@ class Course{
 int main(){
     Course c1;
     c1.displayInfo();
+    c1.roleInfo();
     Instructor i1;
     i1.displayInfo();
+    i1.roleInfo();
     Student s1;
     s1.displayInfo();
+    s1.roleInfo();
+
     return 0;
 }
 // ==================== Person Class Implementation =========================
