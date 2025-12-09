@@ -8,7 +8,25 @@
 
 using namespace std;
 class Person{
-    void display(){
+    void display() virtual{
+        cout << "name is " << name << ", id is "<< id << endl;
+    }
+        string name;
+        int id;
+
+    public:
+    Person(){
+        
+    }
+    Person(string n, int id){
+        name = n;
+        this->id = id;
+    }
+    ~Person(){
+        delete *Person;
+    }
+    virtual void roleInfo(){
+    
         cout << "name is " << name << ", id is "<< id << endl;
     }
 };
@@ -26,7 +44,7 @@ class Student{
 
         
     }
-    void display(){
+    void display() override{
         cout << "Year level is: " << yearLevel << ", major is " << major << endl;
     }
 };
@@ -44,7 +62,7 @@ Instructor(){
         cout << "department :" << department<< " experience: " <<experienceYears << endl;
 
     }
-    void display(){
+    void display() override{
         cout << "department :" << department<< " experience: " <<experienceYears << endl;
     }
 };
@@ -71,31 +89,25 @@ class Course{
     }
 };
 int main(){
-    Course c1;
+    Course c1("23A8dS", "CS", 400);
     c1.displayInfo();
     c1.roleInfo();
-    Instructor i1;
+    Course c2("23WA8dS", "BI", 200);
+    c2.displayInfo();
+    c2.roleInfo();
+    
+    Instructor i1("Finance", 3);
     i1.displayInfo();
     i1.roleInfo();
-    Student s1;
+    
+    Student s1(2, "CS");
     s1.displayInfo();
     s1.roleInfo();
 
     return 0;
 }
 // ==================== Person Class Implementation =========================
-        string courseCode;
-        string courseName;
-        int maxStudents;
-        Student* students;
 
-public:
-    Course();
-    Course(string cC, string cN, int mS);
-    ~Course();
-    void addStudent(const Student& s);
-    void displayCourseInfo();
-};
 
 
 // ==================== Student Class Implementation ====================
