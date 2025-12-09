@@ -8,19 +8,16 @@
 
 
 class Student : public Person{
-    
+    protected:
     int yearLevel;
     string major;
     void display();
-    Student(){
 
-    }
-    Student(int yL, string m){
-        yearLevel = yL;
-        major = m;
-    }
+    public:
+    Student();
+    Student(int yL, string m);
     ~Student(){};
-    void roleIndo() override;
+    void roleInfo() override;
 
 };
 
